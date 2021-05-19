@@ -1,0 +1,223 @@
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 600px;
+}
+
+* {
+  font-family: "open sans";
+}
+
+body {
+  font-size: 0.9rem;
+  background-color: #ededed;
+  padding: 60px 0;
+}
+
+.header-right h1 {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 61px;
+  color: #f59100;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.form {
+  margin-top: 58px;
+  font-weight: 600;
+}
+
+.form-left {
+  background-color: #fff;
+}
+
+.form-right {
+  background-color: #fff;
+  padding-top: 47px;
+  max-width: 47%;
+}
+.form-right h5 {
+  font-size: 18px;
+  color: #f59100;
+  margin-bottom: 25px;
+}
+
+.form-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.form-row .form-group {
+  padding: 15px 15px 0;
+  align-self: flex-end;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  border: 0;
+  border-radius: 0;
+  padding: 10px 10px;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  font-size: 0.9rem;
+}
+.form-control + label {
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  left: 10px;
+  right: 10px;
+}
+.form-control:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+.form-control:focus + label {
+  color: #f59100;
+}
+.form-control:focus + label, .form-control.has-value + label {
+  font-size: 0.75rem;
+  top: 0;
+}
+
+.form-row .form-control + label {
+  left: 15px;
+  right: 25px;
+  color: #878787;
+}
+.form-row label {
+  color: #878787;
+}
+.form-row .line {
+  left: 15px;
+  right: 15px;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #d9d9d9;
+}
+.line:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  display: block;
+  background-color: #f59100;
+  background-image: -moz-linear-gradient(left, #f59100 0%, #f5a22585 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #f59100), color-stop(100%, #f5a22585));
+  background-image: -webkit-linear-gradient(left, #f59100 0%, #f5a22585 100%);
+  background-image: -o-linear-gradient(left, #f59100 0%, #f5a22585 100%);
+  background: -ms-linear-gradient(left, #f59100 0%, #f5a22585 100%);
+  background: linear-gradient(to right, #f59100 0%, #f5a22585 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$from", endColorstr="$to",GradientType=1 );
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: 0 0;
+}
+
+.form-control:focus ~ .line:after {
+  transform: scaleX(1);
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 44px;
+}
+
+.contacter {
+  font-family: Arial;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+  padding: 0 10px 0px 0px;
+  border-radius: 5px;
+}
+.contacter span {
+  color: #f59100;
+  padding: 0 10px;
+}
+.contacter i {
+  background-color: #f59100;
+  padding: 18px;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+}
+.contacter:hover {
+  cursor: pointer;
+  border: 1px solid #f59100;
+}
+
+label.check {
+  position: relative;
+  padding-left: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check:hover input ~ .checkmark {
+  background-color: #fff;
+}
+.check input:checked ~ .checkmark {
+  border: 2px solid orange;
+}
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+.check .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59100;
+}
+
+@media screen and (max-width: 991px) {
+  .form-right {
+    max-width: 100%;
+  }
+
+  .header-right h1, .logo {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,16 @@
+{
+  "name": "up-test-technique",
+  "version": "1.0.0",
+  "description": "Entretien technique UP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/styles.scss:./public/css/styles.css"
+  },
+  "author": "Amal SEKRI",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "4.2.1",
+    "sass": "^1.32.13"
+  }
+}
